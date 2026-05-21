@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "A robust, scalable UI test automation framework built with **Playwright** and **Cucumber (BDD)**, following Page Object Model (POM) design pattern. Write human-readable test scenarios in Gherkin and execute them with the power of Playwright.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:bdd": "cucumber-js",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "clean": "rimraf reports playwright-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

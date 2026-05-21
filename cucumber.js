@@ -1,8 +1,9 @@
 module.exports = {
   default: {
-    require: ['src/steps/**/*.steps.ts', 'src/hooks/hooks.ts'],
+    require: ['step_definitions/**/*.ts', 'hooks/**/*.ts'],
     requireModule: ['ts-node/register'],
-    format: ['progress', 'html:cucumber-report.html'],
-    formatOptions: { snippetInterface: 'async-await' }
+    format: ['progress', 'html:reports/cucumber-report.html'],
+    formatOptions: { snippetInterface: 'async-await' },
+    parallel: 2
   }
 };
